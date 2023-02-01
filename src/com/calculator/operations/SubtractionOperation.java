@@ -1,10 +1,10 @@
-package operations;
+package com.calculator.operations;
 
 import java.util.Optional;
 
-import scanner.AppScanner;
+import com.calculator.scanner.AppScanner;
 
-public class AdditionOperation implements TwoValueOperation {
+public class SubtractionOperation implements TwoValueOperation {
 
     public Optional<String> readInput() {
         try {
@@ -40,7 +40,7 @@ public class AdditionOperation implements TwoValueOperation {
                 return false;
             }
             Integer secondNumberValue = Integer.parseInt(secondNumber.get());
-            Integer sum = firstNumberValue + secondNumberValue;
+            Integer sum = firstNumberValue - secondNumberValue;
             return performSubsequentAction(sum);
         } catch (Exception e) {
             System.out.println("Invalid input...\n");
@@ -50,7 +50,8 @@ public class AdditionOperation implements TwoValueOperation {
 
     @Override
     public boolean performSubsequentAction(Integer firstNumber) {
-        System.out.print("(Type exit to quit) " + firstNumber + " + ");
+        System.out.print("(Type exit to quit) " + firstNumber + " - ");
+
         Optional<String> secondNumber = readInput();
         try {
             if (!secondNumber.isPresent()) {
@@ -61,7 +62,7 @@ public class AdditionOperation implements TwoValueOperation {
                 return false;
             }
             Integer secondNumberValue = Integer.parseInt(secondNumber.get());
-            Integer sum = firstNumber + secondNumberValue;
+            Integer sum = firstNumber - secondNumberValue;
             return performSubsequentAction(sum);
         } catch (Exception e) {
             System.out.println("Invalid input...\n");

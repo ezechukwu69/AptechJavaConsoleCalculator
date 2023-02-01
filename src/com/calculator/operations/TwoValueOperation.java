@@ -1,4 +1,4 @@
-package operations;
+package com.calculator.operations;
 
 public interface TwoValueOperation {
     public boolean performInitialAction();

@@ -1,8 +1,8 @@
-package printers;
+package com.calculator.printers;
 
 import java.util.ArrayList;
 
-import options.Action;
+import com.calculator.options.Action;
 
 public class MenuPrinter implements Printer {
 

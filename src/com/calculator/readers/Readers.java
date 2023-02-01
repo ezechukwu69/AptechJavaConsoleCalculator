@@ -1,12 +1,12 @@
-package readers;
+package com.calculator.readers;
 
 import java.util.function.Function;
 
-import executors.TwoValueExecutor;
-import operations.AdditionOperation;
-import operations.SubtractionOperation;
-import printers.MenuPrinter;
-import scanner.AppScanner;
+import com.calculator.executors.TwoValueExecutor;
+import com.calculator.operations.AdditionOperation;
+import com.calculator.operations.SubtractionOperation;
+import com.calculator.printers.MenuPrinter;
+import com.calculator.scanner.AppScanner;
 
 public class Readers {
 

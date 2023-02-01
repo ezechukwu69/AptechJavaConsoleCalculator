@@ -1,10 +1,10 @@
-package executors;
+package com.calculator.executors;
 
 import java.util.function.Function;
 
-import operations.TwoValueOperation;
-import printers.MenuPrinter;
-import readers.Readers;
+import com.calculator.operations.TwoValueOperation;
+import com.calculator.printers.MenuPrinter;
+import com.calculator.readers.Readers;
 
 public class TwoValueExecutor {
     private static void performTwoValueOperation(TwoValueOperation twoValueOperation, Function<Void, Void> callable) {
