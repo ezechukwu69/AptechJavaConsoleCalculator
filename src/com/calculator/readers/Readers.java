@@ -4,6 +4,12 @@ import java.util.function.Function;
 
 import com.calculator.executors.TwoValueExecutor;
 import com.calculator.operations.AdditionOperation;
+import com.calculator.operations.AmstrongOperation;
+import com.calculator.operations.AverageOperation;
+import com.calculator.operations.GCDOperation;
+import com.calculator.operations.LCMOperatios;
+import com.calculator.operations.PalindromeOperation;
+import com.calculator.operations.PrimeOperation;
 import com.calculator.operations.SubtractionOperation;
 import com.calculator.printers.MenuPrinter;
 import com.calculator.scanner.AppScanner;
@@ -68,7 +74,31 @@ public class Readers {
                     menuPrinter.print(MenuPrinter.Menu.ARITHMETIC.toString());
                     readArithmeticMenu();
                     break;
-                case 2:
+                case 6:
+                    System.out.println("\n Palindrome number \n");
+                    TwoValueExecutor.performOperation(new PalindromeOperation());
+                    break;
+                case 7:
+                    System.out.println("\n Amstrong number \n");
+                    TwoValueExecutor.performOperation(new AmstrongOperation());
+                    break;
+                case 8:
+                    System.out.println("\n Prime number \n");
+                    TwoValueExecutor.performOperation(new PrimeOperation());
+                    break;
+                case 9:
+                    System.out.println("\n Average \n");
+                    TwoValueExecutor.performOperation(new AverageOperation());
+                    break;
+                case 10:
+                    System.out.println("\n GCD \n");
+                    TwoValueExecutor.performOperation(new GCDOperation());
+                    break;
+                case 11:
+                    System.out.println("\n LCM \n");
+                    TwoValueExecutor.performOperation(new LCMOperatios());
+                    break;
+                case 12:
                     System.out.println("Exiting...");
                     AppScanner.scanner.close();
                     System.exit(0);

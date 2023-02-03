@@ -2,8 +2,7 @@ package com.calculator.operations;
 
 import java.util.Optional;
 
-public class DivisionOperation implements TwoValueOperation {
-
+public class LCMOperatios implements TwoValueOperation {
     @Override
     public boolean performInitialAction() {
         try {
@@ -27,8 +26,16 @@ public class DivisionOperation implements TwoValueOperation {
                 return false;
             }
             Integer secondNumberValue = Integer.parseInt(secondNumber.get());
-            Integer sum = firstNumberValue / secondNumberValue;
-            return performSubsequentAction(sum);
+            int gcd = 1;
+            for (int i = 1; i <= firstNumberValue && i <= secondNumberValue; ++i) {
+                // Checks if i is factor of both integers
+                if (firstNumberValue % i == 0 && secondNumberValue % i == 0)
+                    gcd = i;
+            }
+
+            int lcm = (firstNumberValue * secondNumberValue) / gcd;
+            System.out.printf("The LCM of %d and %d is %d.\n", firstNumberValue, secondNumberValue, lcm);
+            return false;
         } catch (Exception e) {
             System.out.println("Invalid input...\n");
             return performInitialAction();
@@ -37,24 +44,7 @@ public class DivisionOperation implements TwoValueOperation {
 
     @Override
     public boolean performSubsequentAction(Integer firstNumber) {
-        System.out.print("(Type exit to quit) " + firstNumber + " / ");
-
-        Optional<String> secondNumber = readInput();
-        try {
-            if (!secondNumber.isPresent()) {
-                System.out.println("Invalid input...\n");
-                return performSubsequentAction(firstNumber);
-            }
-            if (secondNumber.get().toLowerCase().trim().equals("exit")) {
-                return false;
-            }
-            Integer secondNumberValue = Integer.parseInt(secondNumber.get());
-            Integer sum = firstNumber / secondNumberValue;
-            return performSubsequentAction(sum);
-        } catch (Exception e) {
-            System.out.println("Invalid input...\n");
-            return performSubsequentAction(firstNumber);
-        }
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
     }
-
 }

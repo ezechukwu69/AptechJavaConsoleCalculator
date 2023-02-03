@@ -20,4 +20,10 @@ public class TwoValueExecutor {
             return null;
         });
     };
+
+    public static void performOperation(TwoValueOperation twoValueOperation) {
+        performTwoValueOperation(twoValueOperation, (v) -> {
+            return null;
+        });
+    };
 }

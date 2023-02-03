@@ -11,7 +11,13 @@ public class MenuPrinter implements Printer {
 
     private void seedMainMenu() {
         mainMenuActions.add(new Action(1, "Arrithmetic Operations"));
-        mainMenuActions.add(new Action(2, "Exit"));
+        mainMenuActions.add(new Action(6, "Palindrome number"));
+        mainMenuActions.add(new Action(7, "Amstrong number"));
+        mainMenuActions.add(new Action(8, "Prime number"));
+        mainMenuActions.add(new Action(9, "Average"));
+        mainMenuActions.add(new Action(10, "GCD"));
+        mainMenuActions.add(new Action(11, "LCM"));
+        mainMenuActions.add(new Action(12, "Exit"));
     }
 
     private void seedArrithMeticActions() {

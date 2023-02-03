@@ -2,20 +2,7 @@ package com.calculator.operations;
 
 import java.util.Optional;
 
-import com.calculator.scanner.AppScanner;
-
 public class AdditionOperation implements TwoValueOperation {
-
-    public Optional<String> readInput() {
-        try {
-            String data = AppScanner.scanner.nextLine();
-            return Optional.of(data);
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            System.out.println("Invalid input");
-            return readInput();
-        }
-    }
 
     @Override
     public boolean performInitialAction() {
