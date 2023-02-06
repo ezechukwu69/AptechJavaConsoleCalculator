@@ -17,7 +17,7 @@ public class MenuPrinter implements Printer {
     mainMenuActions.add(new Action(2, "Advanced Arrithmetic Operations"));
     mainMenuActions.add(new Action(3, "Math Operations"));
     mainMenuActions.add(new Action(4, "Trigonometric Operations"));
-    mainMenuActions.add(new Action(5, "Exponential Operations"));
+    mainMenuActions.add(new Action(5, "Exponential Function"));
     mainMenuActions.add(new Action(6, "Palindrome number"));
     mainMenuActions.add(new Action(7, "Amstrong number"));
     mainMenuActions.add(new Action(8, "Prime number"));

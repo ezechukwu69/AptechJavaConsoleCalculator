@@ -11,6 +11,7 @@ import com.calculator.operations.ArithmeticOperation.ArithmeticOperationType;
 import com.calculator.operations.MathOperations.MathOperationType;
 import com.calculator.operations.TrigonometricOperations.TrigonometricType;
 import com.calculator.operations.AverageOperation;
+import com.calculator.operations.ExponentialOperation;
 import com.calculator.operations.GCDOperation;
 import com.calculator.operations.LCMOperatios;
 import com.calculator.operations.MathOperations;
@@ -209,7 +210,8 @@ public class Readers {
           readTrigonometricMenu();
           break;
         case 5:
-          readAdvancedArrithmeticMenu();
+          System.out.println("\n Exponential function \n");
+          TwoValueExecutor.performOperation(new ExponentialOperation());
           break;
         case 6:
           System.out.println("\n Palindrome number \n");
